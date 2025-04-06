@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kutrova | Offensive Security</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      .typing {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(30, end) infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white font-mono" x-data="{ dark: true }" :class="dark ? 'bg-black text-white' : 'bg-gray-100 text-gray-900'">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 shadow-md">
+      <h1 class="text-2xl font-bold text-neon-green">Kutrova</h1>
+      <button @click="dark = !dark" class="bg-gray-700 p-2 rounded">Toggle Mode</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20">
+      <h2 class="text-4xl md:text-6xl mb-4">I'm <span class="text-neon-pink typing">Penetration Tester</span></h2>
+      <p class="text-xl">Cyberpunk Red Teamer | Web Hacker | Security Enthusiast</p>
+    </section>
+
+    <!-- About Me -->
+    <section class="max-w-3xl mx-auto px-4 py-10">
+      <h3 class="text-2xl text-neon-blue mb-4">About Me</h3>
+      <p class="text-lg">
+        I'm Kutrova, a final year BCA student at BCMath College, Gauhati University, with a focus on offensive security.
+        I specialize in red teaming, ethical hacking, and developing custom tools for penetration testing and exploit research.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="px-4 py-10 bg-gray-900">
+      <h3 class="text-2xl text-neon-green mb-6 text-center">Skills</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+        <div class="p-4 bg-gray-800 rounded">Penetration Testing</div>
+        <div class="p-4 bg-gray-800 rounded">Vulnerability Assessment</div>
+        <div class="p-4 bg-gray-800 rounded">Exploit Development</div>
+        <div class="p-4 bg-gray-800 rounded">Red Teaming</div>
+        <div class="p-4 bg-gray-800 rounded">Security Tool Dev</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="px-4 py-10">
+      <h3 class="text-2xl text-neon-blue mb-6 text-center">Projects</h3>
+      <div>
+        <!-- Filters -->
+        <div class="flex justify-center space-x-4 mb-6">
+          <button class="filter-btn" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ctf">CTFs</button>
+          <button class="filter-btn" data-filter="tools">Tools</button>
+          <button class="filter-btn" data-filter="research">Research</button>
+        </div>
+        <!-- Project cards -->
+        <div class="grid md:grid-cols-3 gap-6" id="project-grid">
+          <!-- Example -->
+          <div class="project-card" data-category="ctf">
+            <div class="p-4 bg-gray-800 rounded">HackTheBox Writeup</div>
+          </div>
+          <div class="project-card" data-category="tools">
+            <div class="p-4 bg-gray-800 rounded">Custom Exploit Scanner</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="px-4 py-10 bg-gray-900">
+      <h3 class="text-2xl text-neon-pink mb-6 text-center">Certifications & Badges</h3>
+      <ul class="space-y-4 text-center">
+        <li>TryHackMe: Offensive Security Path</li>
+        <li>Hack The Box Academy: Red Teaming Labs</li>
+      </ul>
+    </section>
+
+    <!-- Blog -->
+    <section class="px-4 py-10">
+      <h3 class="text-2xl text-neon-green mb-6 text-center">Blog</h3>
+      <div class="space-y-6">
+        <article class="bg-gray-800 p-4 rounded">
+          <h4 class="text-xl font-bold mb-2">Bypassing WAFs with Encoded Payloads</h4>
+          <p class="text-sm">Exploring evasion techniques using URL encoding and obfuscation.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="px-4 py-10 bg-gray-900">
+      <h3 class="text-2xl text-neon-blue mb-6 text-center">Contact</h3>
+      <form action="https://formspree.io/f/yourformid" method="POST" class="max-w-xl mx-auto space-y-4">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-2 rounded bg-gray-800">
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-2 rounded bg-gray-800">
+        <textarea name="message" placeholder="Your Message" class="w-full p-2 rounded bg-gray-800"></textarea>
+        <button class="bg-neon-green px-4 py-2 rounded">Send</button>
+      </form>
+    </section>
+
+    <!-- PGP Key -->
+    <section class="px-4 py-10">
+      <h3 class="text-2xl text-neon-pink mb-6 text-center">PGP Key</h3>
+      <pre class="bg-gray-800 p-4 rounded text-xs overflow-x-auto">
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP.js v4.10.10
+Comment: https://openpgpjs.org
+...
+-----END PGP PUBLIC KEY BLOCK-----
+      </pre>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="px-4 py-10 bg-gray-900">
+      <h3 class="text-2xl text-neon-green mb-4 text-center">Disclaimer</h3>
+      <p class="max-w-2xl mx-auto text-sm text-center">
+        This portfolio is intended for educational and professional purposes only. All hacking activities shown are ethical, authorized, and within legal boundaries.
+      </p>
+    </section>
+
+    <!-- Resume Button -->
+    <div class="text-center my-10">
+      <a href="resume.pdf" class="bg-neon-blue px-6 py-2 rounded">Download Resume</a>
+    </div>
+
+    <!-- Terminal Component -->
+    <section class="px-4 py-10">
+      <div class="bg-black text-neon-green font-mono p-4 rounded shadow-lg max-w-3xl mx-auto">
+        <p id="terminal"></p>
+      </div>
+    </section>
+
+    <!-- Network Animation Placeholder -->
+    <section class="px-4 py-10">
+      <div class="w-full h-64 bg-gradient-to-tr from-neon-blue to-neon-pink rounded shadow-inner"></div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+      // Terminal Typing Simulation
+      const terminalText = [
+        'nmap -sS 192.168.0.1',
+        'sqlmap -u "http://target.com?id=1" --batch',
+        'msfconsole -q',
+        'use exploit/windows/smb/ms17_010_eternalblue'
+      ];
+      let i = 0;
+      function typeTerminal() {
+        const terminal = document.getElementById('terminal');
+        terminal.innerHTML = '';
+        let line = terminalText[i];
+        let j = 0;
+        let interval = setInterval(() => {
+          terminal.innerHTML += line[j];
+          j++;
+          if (j >= line.length) {
+            clearInterval(interval);
+            i = (i + 1) % terminalText.length;
+            setTimeout(typeTerminal, 1500);
+          }
+        }, 100);
+      }
+      typeTerminal();
+
+      // Filter Projects
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.dataset.filter;
+          document.querySelectorAll('.project-card').forEach(card => {
+            card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
+          });
+        });
+      });
+    </script>
+
+    <style>
+      .text-neon-green { color: #39ff14; }
+      .text-neon-blue { color: #00ffff; }
+      .text-neon-pink { color: #ff00ff; }
+      .bg-neon-blue { background-color: #00ffff; color: black; }
+      .bg-neon-green { background-color: #39ff14; color: black; }
+      .bg-neon-pink { background-color: #ff00ff; color: black; }
+    </style>
+  </body>
+</html>
